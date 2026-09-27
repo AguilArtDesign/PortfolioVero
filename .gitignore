@@ -1,5 +1,8 @@
 # build output
 dist/
+
+# Local references and source artwork
+/NO SUBIR A GIT/
 # generated types
 .astro/
 

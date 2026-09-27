@@ -1,17 +1,39 @@
 ---
-
+import '@fontsource/bebas-neue/latin-400.css';
+import '@fontsource-variable/inter/wght.css';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="description" content="Portafolio de Verónica, diseñadora gráfica." />
+		<title>Verónica | Portafolio</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header />
+		<main>
+			<Hero />
+		</main>
 	</body>
 </html>
+
+<style is:global>
+	:root {
+		--font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+		--font-body: 'Inter Variable', Arial, sans-serif;
+		--font-brand: var(--font-body);
+		--font-nav: var(--font-display);
+		background: #f3e9d8;
+		color: #1e1c1c;
+		font-family: var(--font-body);
+	}
+
+	*, *::before, *::after { box-sizing: border-box; }
+	body { margin: 0; }
+</style>
